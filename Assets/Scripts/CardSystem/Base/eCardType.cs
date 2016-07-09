@@ -20,25 +20,21 @@ using System.Collections;
 #endregion
 
 #region Other Includes
-
+using Starvoxel.Core;
 #endregion
 #endregion
 
  namespace JJ.DungeonThing
 {
-	public class eCardType
+	public class eCardType : TypeSafeEnum
 	{
 		#region Enum Values
+        public static readonly eCardType Damage = new eCardType("Damage");
+        public static readonly eCardType Minion = new eCardType("Minion");
         #endregion
 
         #region Constructor Methods
-        private eCardType()
-		{
-			
-		}
-		#endregion
-	
-		#region Private Methods
+        protected eCardType(string value) : base(value, null) {	}
 		#endregion
 	}
 	
